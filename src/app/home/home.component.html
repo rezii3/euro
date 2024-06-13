@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="container-top-text">
+    <h1 class="title-h1">
+      გაეცანი შენზე მორგებულ სპორტულ სიახლეებსა და ანალიტიკურ სტატიებს.
+    </h1>
+    <a class="reg" href="login">რეგისტაცია</a>
+  </div>
+  <div class="container-cards">
+    <div class="card" *ngIf="popular.length > 5">
+      <img class="card-img" [src]="popular[5].image.fileUrl" alt="" />
+      <div class="texts">
+        <h2 class="card-subtitle">{{ popular[5].subtitle }}</h2>
+        <p class="card-title">{{ popular[5].title }}</p>
+      </div>
+      <div class="buttons">
+        <div class="left-icons">
+          <span class="time">8 საათის წინ .</span>
+          <span
+            nz-icon
+            nzType="file-text"
+            nzTheme="outline"
+            style="font-size: 1rem"
+          ></span>
+          <span class="read">{{ popular[5].estimatedReadTime }}წთ</span>
+        </div>
+        <div class="right-icons">
+          <i class="pi pi-thumbs-up" style="font-size: 1.1rem"></i>
+          <span
+            nz-icon
+            nzType="message"
+            nzTheme="outline"
+            style="font-size: 1.1rem"
+          ></span>
+          <i class="pi pi-bookmark" style="font-size: 1.1rem"></i>
+        </div>
+      </div>
+    </div>
+    <div class="card-r">
+      <div class="right-card" *ngFor="let pop of popular.slice(0, 4)">
+        <img class="card-img-r" [src]="pop.image.fileUrl" alt="" />
+        <div class="texts">
+          <p class="card-title-r">{{ pop.title }}</p>
+        </div>
+        <div class="buttons">
+          <div class="left-icons">
+            <span class="time">null საათის წინ .</span>
+            <span
+              nz-icon
+              nzType="file-text"
+              nzTheme="outline"
+              style="font-size: 1rem"
+            ></span>
+            <span class="read">{{ pop.estimatedReadTime }}წთ</span>
+          </div>
+          <div class="right-icons">
+            <i class="pi pi-thumbs-up" style="font-size: 1.1rem"></i>
+            <span
+              nz-icon
+              nzType="message"
+              nzTheme="outline"
+              style="font-size: 1.1rem"
+            ></span>
+            <i class="pi pi-bookmark" style="font-size: 1.1rem"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-news></app-news>
+

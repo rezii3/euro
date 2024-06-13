@@ -1,0 +1,53 @@
+<div class="container"><div class="container-form">
+    <div class="form-top">
+        <div class="logo">
+            <img class="top-img" src="https://europop.ge/images/eplus.png" alt="">
+        </div>
+        <div class="text">
+            <h2>აღმოაჩინე europop-ის უახლესი სტატიები, ითამაშე ქვიზები და მოუსმინე პოდკასტებს და ჩაერთე დისკუსიებში</h2>
+        </div>
+    </div>
+    <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your username!">
+            <nz-input-group nzPrefixIcon="user">
+              <input type="text" nz-input formControlName="userName" placeholder="ელფოსტა" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your Password!">
+            <nz-input-group nzPrefixIcon="lock">
+              <input type="password" nz-input formControlName="password" placeholder="პაროლი" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <div nz-row class="login-form-margin">
+          <div nz-col [nzSpan]="12">
+            <label nz-checkbox formControlName="remember">
+              <span class="me">Remember me</span>
+            </label>
+          </div>
+          <div nz-col [nzSpan]="12">
+            <a class="login-form-forgot">დაგავიწყდა პაროლი?</a>
+          </div>
+        </div>
+        <div class="form-end">
+            <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">ავტორიზაცია</button>
+        <h3 class="dont">არ გაქვს ანგარიში?<a class="now" href="">რეგისტრაცია</a></h3>
+        </div>
+        <div class="space">
+            <div class="an">
+            </div>
+            <p>ან</p>
+            <div class="an">
+            </div>
+        </div>
+        <div class="icons-list">
+            <img class="icons" src="https://img.icons8.com/?size=100&id=110580&format=png&color=000000" alt="">
+            <img class="icons" src="https://img.icons8.com/?size=100&id=118562&format=png&color=000000" alt="">
+            <img class="icons" src="https://img.icons8.com/?size=100&id=113089&format=png&color=000000" alt="">
+          </div>
+      </form>
+</div></div>
+

@@ -1,0 +1,17 @@
+@import "./../node_modules/primeng/resources/themes/lara-light-blue/theme.css";
+@import "./../node_modules/primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+* {
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}

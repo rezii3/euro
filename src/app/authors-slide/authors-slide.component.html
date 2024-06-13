@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="main-container">
+
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true"  space-between="20"
+        slides-per-view="2.7">
+        <swiper-slide *ngFor="let auth of authors">
+            <div class="main">
+                <div class="back-auth"></div>
+                    <div class="content">
+                        <img class="auth-logo" src="{{auth.image.fileUrl}}" alt="">
+                        <div class="icones">
+                            <div class="left">
+                                <i class="pi pi-users" style="font-size: 1.5rem"></i>
+                            </div>
+                            <div class="right">
+                                <i class="pi pi-star" style="font-size: 1.5rem"></i>
+                            </div>
+                        </div>
+                        <div class="butt">
+                            <button class="shadow__btn">
+                                uiverse
+                            </button>
+                        </div>
+                    </div>
+            </div>
+        </swiper-slide>
+      </swiper-container>
+
+    </div>
+</div>

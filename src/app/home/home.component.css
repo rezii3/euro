@@ -1,0 +1,131 @@
+.container-top-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    height: 170px;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin: 40px 0px;
+}
+.container{
+    background-image: url(https://europop.ge/images/coverNotAuth.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-cards{
+    width: 100%;
+    max-width: 1220px;
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.title-h1{
+    color: white;
+    font-size: 37px;
+    font-weight: 600;
+}
+.reg{
+    background-color: tomato;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+
+.card-img{
+    width: 535px;
+    height: 530px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.card{
+    background-color: #1e1e1f;
+    border-radius: 10px;
+    height:auto;
+}
+.card-subtitle{
+    color: tomato;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0px;
+}
+.card-title{
+    color: white;
+    font-size: 23px;
+    width: 500px;
+    font-weight: 600;
+    margin: 0px;
+}
+.texts{
+    padding: 15px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-top: 1px solid #383838;
+}
+.left-icons,.right-icons{
+    color: #b5b5b5;
+    font-weight: 600;
+}
+.right-icons,.left-icons{
+    gap: 7px;
+    display: flex;
+    align-items: center;
+}
+.right-icons{
+    gap: 15px;
+    display: flex;
+    align-items: center;
+}
+span:hover{
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+i:hover{
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.card-img-r{
+    object-fit: cover;
+    width: 320px;
+    height: 191px;
+    border-radius: 10px;
+}
+.card-r{
+        display: flex;
+        gap: 20px;
+        box-sizing: border-box;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+}
+.right-card{
+    background-color: #1e1e1f;
+        border-radius: 10px;
+        width: 320px;
+        box-sizing: border-box;
+}
+.card-title-r{
+    color: white;
+    font-size: 18px;
+    width: 290px;
+    font-weight: 600;
+    margin: 0px;
+}

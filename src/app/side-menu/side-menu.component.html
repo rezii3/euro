@@ -1,0 +1,187 @@
+<div class="container">
+    <div class="left">
+        <div class="titles">
+            <div class="texts" *ngFor="let item of menuItems" (mouseenter)="showContent(item.key)" >
+                <div class="suvi">
+                    <span class="title-s">{{ item.label }}</span>
+                    <span class="plus-icon" nz-icon nzType="plus" nzTheme="outline"></span>
+                </div>
+                <span class="icon-color" nz-icon nzType="right" nzTheme="outline"></span>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="side-texts" *ngIf="hoveredContent === 'default'">
+           <h2>ინფორმაცია არ მოძებნა</h2> 
+        </div>
+        <div class="side-texts" *ngIf="hoveredContent === 'football-local'">
+            <div class="title-side"><h2>ქართული ფეხბურთი</h2>
+            <span class="menu-text">ლეგიონერები</span>
+            <span class="menu-text">ეროვნული ლიგა</span>
+            <span class="menu-text">საქართველოს თასი</span>
+            <span class="menu-text">ფუტსალი</span>
+            <span class="menu-text">ეროვნული ნაკრები</span>
+            <span class="menu-text">ასაკობრივი ნაკრები</span>
+            </div> 
+        </div>
+
+        <div class="side-texts" *ngIf="hoveredContent === 'football-world'">
+           <div class="title-side"><h2>მსოფლიო ფეხბურთი</h2>
+            <span class="menu-text">ჩემპიონთა ლიგა</span>
+            <span class="menu-text">ევროპა ლიგა</span>
+            <span class="menu-text">მსოფლიოს ჩემპიონატი</span>
+            <span class="menu-text">იტალია</span>
+            <span class="menu-text">ინგლისი</span>
+            <span class="menu-text">გერმანია</span>
+            <span class="menu-text">ესპანეთი</span>
+            <span class="menu-text">საფრანგეთი</span>
+            <span class="menu-text">კოპა ამერიკა</span>
+            <span class="menu-text">ერთა ლიგა</span>
+            <span class="menu-text">კონფერენს ლიგა</span>
+            <span class="menu-text">ევროპის ჩემპიონატი</span>
+        </div>
+        </div>
+
+        <div class="side-texts" *ngIf="hoveredContent === 'basketball'">
+            <div class="title-side"><h2>კალათბურთი</h2>
+             <span class="menu-text">ქართული კალათბურთი</span>
+             <span class="menu-text">მსოფლიო კალათბურთი</span>
+            </div>
+         </div>
+
+         <div class="side-texts" *ngIf="hoveredContent === 'rugby'">
+            <div class="title-side"><h2>ქართული რაგბი</h2>
+             <span class="menu-text">დიდი ათი</span>
+             <span class="menu-text">ბორჯღალოსნები</span>
+             <span class="menu-text">სარაგბო ასაკობრივი ნაკრები</span>
+             <span class="menu-text">სარაგბო ლეგიონი</span>
+             <span class="menu-text"></span>
+            </div>
+         </div>
+
+         <div class="side-texts" *ngIf="hoveredContent === 'mma'">
+            <div class="title-side"><h2>MMA</h2>
+             <span class="menu-text">UFC</span>
+             <span class="menu-text">GFC</span>
+            </div>
+         </div>
+
+         <div class="side-texts" *ngIf="hoveredContent === 'judo'">
+            <div class="title-side"><h2>ძიუდო</h2>
+             <span class="menu-text">ქართული ძიუდო</span>
+             <span class="menu-text">მსოფლიო ძიუდო</span>
+             <span class="menu-text">ძიუდოს ევროპის ჩემპიონატი</span>
+             <span class="menu-text">ძიუდოს მსოფლიო ჩემპიონატი</span>
+             <span class="menu-text">თბილისის გრანდ სლემი</span>
+            </div>
+         </div>
+
+         <div class="side-texts" *ngIf="hoveredContent === 'other'">
+            <div class="title-side"><h2>სხვა სახეობები</h2>
+            <span class="menu-text">კრივი</span>
+            <span class="menu-text">ფარიკაობა</span>
+            <span class="menu-text">ხელბურთი</span>
+            <span class="menu-text">წყალბურთი</span>
+            <span class="menu-text">ფიგურული სრიალი</span>
+            <span class="menu-text">ფორმულა 1</span>
+            <span class="menu-text">ჭადრაკი</span>
+            <span class="menu-text">ჰოკეი</span>
+            <span class="menu-text">მძლეოსნობა</span>
+            <span class="menu-text">ტყვიის სროლა</span>
+            <span class="menu-text">ზამთრის სახეობები</span>
+            <span class="menu-text">ავტოსპორტი</span>
+            <span class="menu-text">ძალოსნობა</span>
+            <span class="menu-text">ქართული სპორტი</span>
+        </div>
+         </div>
+        
+         <div class="side-texts" *ngIf="hoveredContent === 'contact'">
+            <div class="title-side" style="width: 250px;"><h2>კონტაქტი</h2>
+                <div class="icons-side">
+                    <span class="pi pi-instagram" style="color: rgb(255, 0, 98);"></span>
+                <span class="menu-text" >Instagram</span>
+                </div>
+                <div class="icons-side">
+                    <span class="pi pi-facebook" style="color: rgb(0, 115, 255);"  ></span>
+                <span class="menu-text">Facebook</span>
+                </div>
+                <div class="icons-side">
+                    <span class="pi pi-youtube" style="color: rgb(223, 64, 61);"></span>
+                   <span class="menu-text">Youtube</span>
+                </div>
+                <div class="icons-side">
+                    <span class="pi pi-tiktok" style="color: white;"></span>
+                    <span class="menu-text">Tiktok</span>
+                </div>
+            <div class="icons-side">
+                <span class="pi pi-envelope" style="color: white;"></span>
+                <span class="menu-text">მესენჯერი</span>
+            </div>
+            
+        </div>
+            <div class="mail-side" style="padding: 0px 10px;">
+                <div class="mail-title">
+                    <h2>მოგვწერე მეილი</h2>
+                </div>
+                <div class="wave-group">
+                    <input required="" type="text" class="input">
+                    <span class="bar"></span>
+                    <label class="label">
+                      <span class="label-char" style="--index: 0">ელფოსტა</span>
+                    </label>
+                  </div>
+                  <div class="text-area">
+                    <textarea class="area" name="comment" form="usrform" placeholder="მესიჯი"></textarea>
+                    <span class="max">მაქსიმალური სიმბოლოების რაოდენობა 0/150</span>
+                  </div>
+                  <div class="mail-btn">
+                    <button>
+                        <div class="svg-wrapper-1">
+                          <div class="svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                              <path fill="none" d="M0 0h24v24H0z"></path>
+                              <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <span>გაგზავნა</span>
+                      </button>
+                  </div>
+            </div>
+            <div class="last-side">
+                <div class="last-titles">
+                    <div class="titles-top">
+                        <h1>გამოიწერე სიახლეები</h1>
+                    <span class="last-span">
+                        შემოგვიერთდი და პირველი გაეცანი მსოფლიო სპორტის უახლეს ამბებს
+                    </span>
+                    </div>
+                    <div class="mail-send">
+                        <div class="input-container" style="width: 300px;">
+                            <input required="" placeholder="ელფოსტა" type="email" style="padding: 0px 10px;">
+                            <button class="invite-btn" type="button">
+                              გამოიწერე
+                            </button>
+                          </div>
+                    </div>
+                    <span class="last-span2">
+                        * სიახლეების გამოწერით ადასტურებ, რომ გაეცანი კონფიდენციალურობის პოლიტიკას და ეთანხმები, რომ შენი მონაცემები დაამუშავოს კომპანიამ შეტყობინებების გამოსაგზავნად
+                    </span>
+                </div>
+              </div>
+         </div>
+         <div class="cards" *ngIf="hoveredContent === 'football-local' || hoveredContent ===  'football-world' || hoveredContent ===  'basketball'|| hoveredContent ===  'rugby' || hoveredContent ===  'mma' || hoveredContent ===  'judo' || hoveredContent ===  'other'">
+            <h3>ახალი ამბები</h3>
+            <div class="card" *ngFor="let news of data.slice(0, 4)">
+                <div class="card-side">
+                    <span class="card-subtitle">{{news.subtitle}}</span>
+                <span class="card-title">{{news.title.slice(0,70)}}...</span>
+                </div>
+                <div class="card-photos">
+                    <img class="card-img" [src]="news.image.fileUrl" alt="">
+                </div>
+            </div>
+          </div>
+    </div>
+</div>
+

@@ -1,0 +1,62 @@
+@if (news) {
+    <div class="container">
+      <div class="main-container">
+        <div class="main">
+          <div class="main-top">
+            <div class="top-att">
+              <div class="top-texts">
+                <i class="pi pi-plus" style="font-size: 1rem" ></i>
+                <a class="new-a" href="">ეროვნული ნაკრები</a>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="arow">
+              <button class="button-G">გამოწერა</button>
+            </div>
+          </div>
+          <div class="main-cards">
+            <div class="cards-top-title">
+              <h1 class="news-text">ახალი ამბები</h1>
+              <p class="news-p">ეროვნული ნაკრების სიახლეებს</p>
+            </div>
+            <div class="cards">
+              <div class="right-card" *ngFor="let pop of news">
+                <img class="card-img-r" [src]="pop.image.fileUrl" alt="" />
+                <div class="text-side">
+                  <div class="texts">
+                    <p class="card-subtitle">{{ pop.subtitle }}</p>
+                    <p class="card-title">{{ pop.title }}</p>
+                    <p class="card-text" [innerHTML]="pop.text.slice(0,85)"></p>
+                  </div>
+                  <div class="buttons">
+                    <div class="left-icons">
+                      <span class="time">{{ pop.timeSincePublished }}</span>
+                      <span
+                        nz-icon
+                        nzType="file-text"
+                        nzTheme="outline"
+                        style="font-size: 1rem"
+                      ></span>
+                      <span class="read">{{ pop.estimatedReadTime }}წთ</span>
+                    </div>
+                    <div class="right-icons">
+                      <i class="pi pi-thumbs-up" style="font-size: 1.1rem"></i>
+                      <span
+                        nz-icon
+                        nzType="message"
+                        nzTheme="outline"
+                        style="font-size: 1.1rem"
+                      ></span>
+                      <i class="pi pi-bookmark" style="font-size: 1.1rem"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <app-aside></app-aside>
+        </div>
+      </div>
+    
+    }

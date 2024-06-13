@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="user-info">
+        <div class="top-texts">
+            <div class="text"><h3>გაეცანი შენზე მორგებულ სპორტულ სიახლეებსა და ანალიტიკურ სტატიებს.</h3></div>
+            <div class="sign">
+                <button class="button">ავტორიზაცია</button>
+            </div>
+        </div>
+        <ul class="main-ul" nz-menu [nzMode]="'horizontal'">
+            <li nz-submenu nzTitle="მუქი დიზაინი" nzIcon="slack" >
+              <ul>
+                  <ul>
+                    <li nz-menu-item>არ მუშაობს</li>
+                  </ul>
+              </ul>
+            </li>
+            <nz-switch class="switch" [(ngModel)]="switchValue"></nz-switch>
+            <li nz-submenu (nzOpenChange)="change($event)" nzTitle="შენახული" nzIcon="save">
+                <ul>
+                    <ul>
+                      <li nz-menu-item>არ მუშაობს</li>
+                    </ul>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="ჩემი ინტერესები" nzIcon="fire">
+                <ul>
+                    <ul>
+                      <li nz-menu-item>არ მუშაობს</li>
+                    </ul>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="პარამეტრები" nzIcon="setting">
+                <ul>
+                    <ul>
+                      <li nz-menu-item>არ მუშაობს</li>
+                    </ul>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="ჩემი აქტივობა" nzIcon="area-chart">
+                <ul>
+                    <ul>
+                      <li nz-menu-item>არ მუშაობს</li>
+                    </ul>
+                </ul>
+            </li>
+          </ul>
+    </div>
+</div>

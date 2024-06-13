@@ -1,0 +1,121 @@
+<div class="aSide">
+    <div class="top-reg">
+      <div class="mail-div">
+        <div class="top-texts-said">
+          <span class="title-reg">გამოიწერე სიახლეები!</span>
+          <span class="text-reg"
+            >შემოგვიერთდი და პირველი გაეცანი მსოფლიო სპორტის უახლეს
+            ამბებს</span
+          >
+        </div>
+        <div class="end-texts">
+          <div class="input-group">
+            <input
+              type="email"
+              class="input"
+              id="Email"
+              name="Email"
+              placeholder="ელფოსტა"
+              autocomplete="off"
+            />
+            <input class="button--submit" value="გამოიწერე" type="submit" />
+          </div>
+          <span class="p-reg"
+            >* სიახლეების გამოწერით ადასტურებ, რომ გაეცანი კონფიდენციალურობის
+            პოლიტიკას და ეთანხმები, რომ შენი მონაცემები დაამუშავოს კომპანიამ
+            შეტყობინებების გამოსაგზავნად</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="side-back">
+      <div class="cards-top-title-p">
+        <p class="power-p" style="color: white; font-size: 13px; font-weight: 600; margin: 0px;">powered  by</p>
+        <h1 class="power-text" style="font-size: 27px; color: white; font-weight: 600; margin: 0px;">europebet</h1>
+      </div>
+      <div class="power-card">
+          <img class="power-img" [src]="power.image.fileUrl" alt="" />
+          <div class="text-side-power">
+            <div class="texts-p">
+              <p class="card-subtitle">{{ power.subtitle }}</p>
+              <p class="card-title" style="font-size: 20px; ">{{ power.title }}</p>
+            </div>
+            <div class="author">
+              <img class="auth" src="{{power.author.avatar.fileUrl}}" alt="">
+              <span class="firstName" style="color: white; font-size: 13px; font-weight: 600; margin-left: 15px;">{{power.author.firstName}}  {{power.author.lastName}} </span>
+           
+            </div>
+            <div class="buttons">
+              <div class="left-icons">
+                <span class="time">2024 წელი.</span>
+                <span
+                  nz-icon
+                  nzType="file-text"
+                  nzTheme="outline"
+                  style="font-size: 1rem"
+                ></span>
+                <span class="read">{{ power.likeCount }}წთ</span>
+              </div>
+              <div class="right-icons">
+                <i class="pi pi-thumbs-up" style="font-size: 1.1rem"></i>
+                <span
+                  nz-icon
+                  nzType="message"
+                  nzTheme="outline"
+                  style="font-size: 1.1rem"
+                ></span>
+                <i class="pi pi-bookmark" style="font-size: 1.1rem"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info-card-main">
+          <div class="info-cards" style="background-color: #202022;" *ngFor="let info of cardInfo.slice(0,3)">
+            <img class="card-img-info" style="cursor: pointer;" [src]="info.image.fileUrl" alt="" />
+            <div class="text-side">
+              <div class="texts">
+                <p class="card-subtitle" style="font-size: 13px;">{{ info.subtitle}}</p>
+                <p class="card-title" style="font-size: 14px; font-weight: 600;"><img class="logo-min" style="width: 20px; height: 20px; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO80AqbwbXhAq-uWNl_QtrH4vUOsfs14Lljg&s" alt=""> {{ info.title.slice(0,45) }}...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn">
+        <span class="more" style="color: tomato; font-size: 19px; font-weight: 600; cursor: pointer;">მეტი</span>
+        <img class="more-logo" style="width: 30px; height: 30px; cursor: pointer; background-color: tomato; border-radius: 30px;" src="https://img.icons8.com/?size=100&id=11537&format=png&color=000000" alt="">
+      </div>
+      <div class="social">
+        <div class="soc-title" style="padding: 10px 0px;">
+          <span class="title-social" style="font-size: 20px; color: white; font-weight: 600;">სოციალური ქსელები</span>
+        </div>
+        <div class="socials">
+          <img class="social-img" src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="">
+          <span class="social-text">Instagram</span>
+        </div>
+        <div class="socials">
+          <img class="social-img" src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="">
+          <span class="social-text">Facebook</span>
+        </div>
+        <div class="socials">
+          <img class="social-img" src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt="">
+          <span class="social-text">Youtube</span>
+        </div>
+        <div class="socials">
+          <img class="social-img" style="border-radius: 30px;" src="https://img.icons8.com/?size=100&id=UgZ7SqOff_S8&format=png&color=000000" alt="">
+          <span class="social-text">Tiktok</span>
+        </div>
+      </div>
+
+      <div class="late-main">
+        <div class="late-texts">
+          <span class="last-news">ბოლო სიახლეები</span>
+          <span class="last-p">გაეცანი მსოფლიო სპორტის სიახლეებს</span>
+        </div>
+        <div class="late-info" *ngFor="let lateinfo of late.slice(0,7)">
+          <span class="late-title">{{lateinfo.title}}</span>
+          <span class="arrow-last" nz-icon nzType="right-circle" nzTheme="outline" style="font-size: 1.5rem;"></span>
+        </div>
+      </div>
+
+    </div>

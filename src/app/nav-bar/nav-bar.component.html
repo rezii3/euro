@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="nav-bar">
+        <div class="left">
+            <div class="menu" (click)="toggleMenu()" [ngClass]="{'open': isMenuOpen}" (click)="toggleSideMenu()">
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
+            </div>
+            <div class="logo">
+                <div class="color"></div>
+                <span class="euro"><a href="">europop</a></span>
+            </div>
+            <div class="line"></div>
+            <div class="logoPlus" (click)="togglePlus()">
+                <button class="plus-B">
+                    <img class="plus" src="https://europop.ge/images/eplus.png" alt="">
+                </button>
+            </div>
+            <div class="sport">
+                <img class="sport-logos" src="https://cdn.europop.ge/1090795a-c062-4604-b795-1b26227fc00b" alt="">
+                <span><a href="/sport-georgia">ქართული სპორტი</a></span>
+            </div>
+            <div class="sport-kvara">
+                <img class="sport-logos" src="https://cdn.europop.ge/8b247cf1-fca5-48bf-a143-20b3ab2d9142" alt="">
+                <span><a href="/kvara">ხვიჩა კვარაცხელია</a></span>
+            </div>
+            <div class="sport-nakrebi">
+                <img class="sport-logos" src="https://cdn.europop.ge/49472241-5caf-4fc8-90b5-cbf3e96f5232" alt="">
+                <span><a href="/nakrebi">ეროვნული ნაკრები</a></span>
+            </div>
+        </div>
+        <div class="right">
+            <div class="search" (click)="getSearch()">
+                <div class="group">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+                        <g>
+                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                        </g>
+                    </svg>
+                    <input class="input" type="search" placeholder="მოძებნე პოსტი,ავტორი,კატეგორია..." />
+                </div>
+            </div>
+            <div class="bell" (click)="enter()">
+                <span style="font-size: 20px; padding: 15px; border-radius: 40px; background-color: #232325;" nz-icon nzType="bell" nzTheme="outline"></span>
+            </div>
+            <div class="login" (click)="enter2()">
+                <span style="font-size: 20px; padding: 15px; border-radius: 40px; background-color: #232325;" nz-icon nzType="user" nzTheme="outline"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<app-navbar-plus *ngIf="showPlus"></app-navbar-plus>
+<app-side-menu *ngIf="showSideMenu" ></app-side-menu>
+ <app-login *ngIf="showLogin"></app-login>
+ <app-user *ngIf="showUser"></app-user>
+ <app-search *ngIf="showSearch"></app-search>
+

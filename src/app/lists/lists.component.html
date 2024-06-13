@@ -1,0 +1,69 @@
+
+    <div class="container">
+      <div class="main-container">
+        <div class="late-texts">
+            <span class="last-news">NEWSTICKER</span>
+            <span class="last-p">მეტი ბოლო სიახლე</span>
+          </div>
+        <div class="list-main">
+            <div class="late-main">
+                <div class="late-info" *ngFor="let lateinfo of info.slice(0,7)">
+                  <span class="late-title">{{lateinfo.title.slice(0,65)}}</span>
+                  <span class="arrow-last" nz-icon nzType="right-circle" nzTheme="outline" style="font-size: 1.5rem;"></span>
+                </div>
+              </div>
+              <div class="late-main">
+                <div class="late-info" *ngFor="let lateinfo of info.slice(7,14)">
+                  <span class="late-title">{{lateinfo.title.slice(0,65)}}</span>
+                  <span class="arrow-last" nz-icon nzType="right-circle" nzTheme="outline" style="font-size: 1.5rem;"></span>
+                </div>
+              </div>
+        </div>
+        <div class="titles-btn">
+            <div class="late-texts">
+                <span class="last-news">ანალიტიკური სტატიები</span>
+                <span class="last-p">ევროპოპის ანალიტიკა, ბლოგები, ინტერვიუები</span>
+              </div>
+              <div class="btn">
+                <span class="more" style="color: tomato; font-size: 17px; font-weight: 600; cursor: pointer;">მეტი</span>
+                <img class="more-logo" style="width: 25px; height: 25px; cursor: pointer; background-color: tomato; border-radius: 30px;" src="https://img.icons8.com/?size=100&id=11537&format=png&color=000000" alt="">
+              </div>
+        </div>
+
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
+        slides-per-view="2">
+        <swiper-slide *ngFor="let slide of carusel">
+            
+            <div class="power-card">
+                <img class="power-img" [src]="slide.image.fileUrl" alt="" />
+                <div class="text-side-power">
+                  <div class="texts-p">
+                    <p class="card-subtitle">{{ slide.subtitle }}</p>
+                    <p class="card-title" style="font-size: 20px;"><img class="logo-min" style="width: 30px; height: 20px; margin-right: 10px;" src="https://europop.ge/images/eplus.png" alt="">{{ slide.title }}</p>
+                  </div>
+                  <div class="author">
+                    <img class="auth" src="{{slide.author.avatar.fileUrl}}" alt="">
+                    <span class="firstName" style="color: white; font-size: 13px; font-weight: 600; margin-left: 15px;">
+                      {{slide.author.firstName}}  {{slide.author.lastName}}
+                    </span>
+                  </div>
+                  <div class="buttons">
+                    <div class="left-icons">
+                      <span class="time">2024 წელი.</span>
+                      <span nz-icon nzType="file-text" nzTheme="outline" style="font-size: 1rem"></span>
+                      <span class="read">{{ slide.likeCount }}წთ</span>
+                    </div>
+                    <div class="right-icons">
+                      <i class="pi pi-thumbs-up" style="font-size: 1.1rem"></i>
+                      <span nz-icon nzType="message" nzTheme="outline" style="font-size: 1.1rem"></span>
+                      <i class="pi pi-bookmark" style="font-size: 1.1rem"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </swiper-slide>
+      </swiper-container>
+
+          </div>
+        </div>

@@ -1,0 +1,38 @@
+
+<div class="container">
+    <div class="main-container">
+        <div class="titles-btn">
+            <div class="late-texts">
+                <span class="last-news">{{video.title}}</span>
+                <span class="last-p" [innerHTML]="video.description"></span>
+              </div>
+              <div class="btn">
+                <span class="more" style="color: tomato; font-size: 17px; font-weight: 600; cursor: pointer;">მეტი</span>
+                <img class="more-logo" style="width: 25px; height: 25px; cursor: pointer; background-color: tomato; border-radius: 30px;" src="https://img.icons8.com/?size=100&id=11537&format=png&color=000000" alt="">
+              </div>
+        </div>
+
+        <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+        thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+        <swiper-slide *ngFor="let videos of video.items">
+            <img class="video-img" src="{{videos.thumbnailUrl}}" alt="">
+        </swiper-slide>
+      </swiper-container>
+    
+      <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
+        watch-slides-progress="true">
+        <swiper-slide *ngFor="let videos of video.items">
+            <img class="video-img" src="{{videos.thumbnailUrl}}" alt="">
+        </swiper-slide>
+      </swiper-container>
+      
+      <div class="banner">
+        <div class="banner-btn">
+            <div class="btn-1"><img class="apple" src="https://europop.ge/icons/appstore.png" alt=""></div>
+            <div class="btn-2"><img class="play-store" src="https://europop.ge/icons/googleplay.png" alt=""></div>
+        </div>
+      </div>
+
+
+    </div>
+    </div>

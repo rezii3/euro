@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="left">
+    <div
+      class="texts"
+      *ngFor="let item of menuItems"
+      (mouseenter)="showContent(item.key)"
+    >
+      <div class="suvi">
+        <span class="title-s">{{ item.label }}</span>
+        <span class="plus-icon" nz-icon nzType="plus" nzTheme="outline"></span>
+      </div>
+      <span class="icon-color" nz-icon nzType="right" nzTheme="outline"></span>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="news">
+      <div class="side-texts" *ngIf="hoveredContent === 'qviz'">
+        <h2>ქვიზები</h2>
+        <h3>ინფორმაცია არ მოძებნა</h3>
+      </div>
+      <div
+        class="cards"
+        *ngIf="
+          hoveredContent === 'litic' ||
+          hoveredContent === 'blog' ||
+          hoveredContent === 'history'
+        "
+      >
+        <div class="card" *ngFor="let news of data.slice(1, 4)">
+          <div class="card-img">
+            <img class="card-photo" [src]="news.image.fileUrl" alt="Image 1" />
+          </div>
+          <div class="card-titles">
+            <div class="title-end" style="padding: 10px 0px;">
+              <span class="span-subtitle" style="color: tomato;">{{
+                news.subtitle
+              }}</span>
+            </div>
+            <div class="logo-text" style="padding: 10px 0px;">
+              <img
+                class="plus-logo"
+                style="width: 35px; height: 20px;"
+                src="https://europop.ge/images/eplus.png"
+                alt=""
+              />
+              <span class="span-title" style="color: white;">{{
+                news.title
+              }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="last-side">
+        <div class="last-titles">
+          <div class="titles-top">
+            <img
+              class="side-plus"
+              src="https://europop.ge/images/eplus.png"
+              alt=""
+            />
+            <span class="last-span">
+              აღმოაჩინე უახლესი სტატიები, ითამაშე ქვიზები, მოუსმინე პოდკასტებს
+              და ჩაერთე დისკუსიებში.
+            </span>
+          </div>
+          <div class="mail-send">
+            <button class="button">ავტორიზაცია</button>
+          </div>
+          <span class="last-span2">
+            უკვე გაქვთ ექაუნთი?<a href="">რეგისტრაცია</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
