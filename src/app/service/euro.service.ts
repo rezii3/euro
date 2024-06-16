@@ -7,6 +7,7 @@ import { Welcome } from '../interfaces/power.model';
 import { latestRoot } from '../interfaces/latest.model';
 import { slideRout } from '../interfaces/slide.model';
 import { videoRoot } from '../interfaces/video.model';
+import { endRoot } from '../interfaces/end.model';
 
 
 @Injectable({
@@ -28,9 +29,11 @@ export class EuroService {
   nakrebiUrl:string = "http://localhost:3000/proxy?targetUrl=https://europop.ge/api/search?query=%E1%83%9C%E1%83%90%E1%83%99%E1%83%A0%E1%83%94%E1%83%91%E1%83%98&detailed=true"
   listUrl:string = "http://localhost:3000/proxy?targetUrl=https://europop.ge/api/posts?cursor="
   videoUrl:string = "http://localhost:3000/proxy?targetUrl=https://europop.ge/api/video-galleries/142"
+  forumUrl:string = "http://localhost:3000/proxy?targetUrl=https://europop.ge/api/video-galleries/143"
+  TatoUrl:string = "http://localhost:3000/proxy?targetUrl=https://europop.ge/api/video-galleries/141"
+  qvemotapost: string = "http://localhost:3000/proxy?targetUrl=https://europop.ge/api/posts/latest?siteBlockId=509"
 
 
-  qvemotapost: string = "https://europop.ge/api/posts/latest?siteBlockId=509"
 
 
   getSideUrl() {
@@ -74,5 +77,14 @@ export class EuroService {
   }
   getVideo(){
     return this._http.get<videoRoot>(this.videoUrl)
+  }
+  getForum(){
+    return this._http.get<videoRoot>(this.forumUrl)
+  }
+  getTato(){
+    return this._http.get<videoRoot>(this.TatoUrl)
+  }
+  getEnd(){
+    return this._http.get<endRoot>(this.qvemotapost)
   }
 }

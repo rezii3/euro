@@ -41,7 +41,7 @@
 .title-s{
 color: white;
 font-weight: 600;
-font-size: 18px;
+font-size: 16px;
 cursor: pointer;
 }
 
@@ -107,8 +107,13 @@ h2,h1{
     cursor: pointer;
     color: white;
 }
+h1{
+  text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
 .menu-text{
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     color: white;
@@ -339,7 +344,7 @@ h2,h1{
   
   .invite-btn {
     position: absolute;
-    width: 65px;
+    width: 75px;
     right: 4px;
     top: 4px;
     bottom: 4px;
@@ -349,8 +354,8 @@ h2,h1{
     color: #fff;
     padding-top: .25rem;
     padding-bottom: .25rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
     text-align: center;
     vertical-align: middle;
     font-size: 12px;
@@ -377,20 +382,20 @@ h2,h1{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 450px;
+    width: 500px;
     gap: 20px;
   }
   
   .last-span{
     color: white;
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
   }
   .last-span2{
     color: white;
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
   }
   .titles-top{

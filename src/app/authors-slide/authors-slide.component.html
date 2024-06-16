@@ -6,20 +6,31 @@
         slides-per-view="2.7">
         <swiper-slide *ngFor="let auth of authors">
             <div class="main">
-                <div class="back-auth"></div>
+                <div class="back-auth">
+                    <a href="">
+                        <img class="auth-logo" src="{{auth.avatar?.fileUrl}}" alt="">
+                    </a>
+                        
+
+                </div>
                     <div class="content">
-                        <img class="auth-logo" src="{{auth.image.fileUrl}}" alt="">
+                        <div class="avtor-name">
+                            <span class="Fname">{{auth.firstName}}  {{auth.lastName}}</span>
+                        </div>
                         <div class="icones">
                             <div class="left">
-                                <i class="pi pi-users" style="font-size: 1.5rem"></i>
+                                <i class="pi pi-users" style="font-size: 1.2rem"></i>
+                                <span class="count">{{auth.subscribersCount}}</span>
                             </div>
+                            <div class="line"></div>
                             <div class="right">
-                                <i class="pi pi-star" style="font-size: 1.5rem"></i>
+                                <i class="pi pi-star" style="font-size: 1.2rem"></i>
+                                <span class="count">{{auth.likesCount}}</span>
                             </div>
                         </div>
                         <div class="butt">
                             <button class="shadow__btn">
-                                uiverse
+                                გამოწერა
                             </button>
                         </div>
                     </div>

@@ -1,23 +1,4 @@
-.container{
-    background-color: black;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-}
 
-.main-container{
-    display: flex;
-    align-items: flex-start;
-    -webkit-box-pack: justify;
-    flex-direction: column;
-    margin-bottom: 24px;
-    height: 100%;
-    width: 100%;
-    max-width: 1220px;
-    padding-top: 60px;
-    gap: 10px;
-}
 .list-main{
     width: 100%;
     display: flex;
@@ -96,6 +77,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-top: 30px;
   }
 
   

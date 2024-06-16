@@ -1,0 +1,25 @@
+
+
+        <div class="titles-btn">
+            <div class="late-texts">
+                <span class="last-news">{{forum.title}}</span>
+                <span class="last-p" [innerHTML]="forum.description"></span>
+              </div>
+              <div class="btn">
+                <span class="more" style="color: tomato; font-size: 17px; font-weight: 600; cursor: pointer;">მეტი</span>
+                <img class="more-logo" style="width: 25px; height: 25px; cursor: pointer; background-color: tomato; border-radius: 30px;" src="https://img.icons8.com/?size=100&id=11537&format=png&color=000000" alt="">
+              </div>
+        </div>
+        <swiper-container class="mySwiper" space-between="30" slides-per-view="auto" pagination="true"
+        pagination-clickable="true">
+        <swiper-slide *ngFor="let info of forum.items">
+            <div class="main-slide">
+                <img class="slide-img" src="{{info.thumbnailUrl}}" alt="">
+                <div class="texts">
+                    <a href=""><span class="text-slide">{{info.title}}</span></a>
+                </div>
+            </div>
+
+        </swiper-slide>
+      </swiper-container>
+

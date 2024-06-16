@@ -43,12 +43,14 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
 import { NewsComponent } from './news/news.component';
-import { IconComponent } from './icon/icon.component';
 import { AsideComponent } from './aside/aside.component';
 import { ListsComponent } from './lists/lists.component';
 import { register } from 'swiper/element/bundle';
 import { SlideVideoComponent } from './slide-video/slide-video.component';
 import { AuthorsSlideComponent } from './authors-slide/authors-slide.component';
+import { ForumComponent } from './forum/forum.component';
+import { AllCardComponent } from './all-card/all-card.component';
+
 
 
 
@@ -69,11 +71,12 @@ registerLocaleData(en);
     LoginComponent,
     UserComponent,
     NewsComponent,
-    IconComponent,
     AsideComponent,
     ListsComponent,
     SlideVideoComponent,
     AuthorsSlideComponent,
+    ForumComponent,
+    AllCardComponent,
 
   ],
   imports: [

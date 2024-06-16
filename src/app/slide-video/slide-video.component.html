@@ -1,6 +1,4 @@
 
-<div class="container">
-    <div class="main-container">
         <div class="titles-btn">
             <div class="late-texts">
                 <span class="last-news">{{video.title}}</span>
@@ -15,14 +13,25 @@
         <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
         thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
         <swiper-slide *ngFor="let videos of video.items">
+          <div class="main-side">
             <img class="video-img" src="{{videos.thumbnailUrl}}" alt="">
+            <div class="shida">
+              <img class="logo-plus"  src="https://europop.ge/images/eplus-gray.png" alt="">
+              <span class="video-text">{{videos.title}}</span>
+            </div>
+          </div>
         </swiper-slide>
       </swiper-container>
-    
+
       <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
         watch-slides-progress="true">
         <swiper-slide *ngFor="let videos of video.items">
+          <div class="main-side">
             <img class="video-img" src="{{videos.thumbnailUrl}}" alt="">
+            <div class="shida-2">
+              <span class="video-text-2">{{videos.title}}</span>
+            </div>
+          </div>
         </swiper-slide>
       </swiper-container>
       
@@ -34,5 +43,4 @@
       </div>
 
 
-    </div>
-    </div>
+   

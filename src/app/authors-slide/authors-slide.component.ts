@@ -10,9 +10,9 @@ import { Datum } from '../interfaces/euro.model';
 export class AuthorsSlideComponent {
   authors:Datum[]=[]
   constructor(private _euro:EuroService){
-    this._euro.getAuthors().subscribe((response) => {
-      this.authors = response.data
-    });
+    this._euro.getAuthors().subscribe((data)=>{
+      this.authors = data.data
+    })
   }
 
 }

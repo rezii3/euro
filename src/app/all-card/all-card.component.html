@@ -1,0 +1,153 @@
+
+        <div class="main">
+          <div class="main-cards">
+            <div class="cards">
+              <div class="right-card" *ngFor="let pop of news">
+                <img class="card-img-r" [src]="pop.image.fileUrl" alt="" />
+                <div class="text-side">
+                  <div class="texts">
+                    <p class="card-subtitle">{{ pop.subtitle }}</p>
+                    <p class="card-title">{{ pop.title }}</p>
+                    <p class="card-text" [innerHTML]="pop.text.slice(0,85)"></p>
+                  </div>
+                  <div class="buttons">
+                    <div class="left-icons">
+                      <span class="time">{{ pop.timeSincePublished }}</span>
+                      <span
+                        nz-icon
+                        nzType="file-text"
+                        nzTheme="outline"
+                        style="font-size: 1rem"
+                      ></span>
+                      <span class="read">{{ pop.estimatedReadTime }}წთ</span>
+                    </div>
+                    <div class="right-icons">
+                      <i class="pi pi-thumbs-up" style="font-size: 1.1rem"></i>
+                      <span
+                        nz-icon
+                        nzType="message"
+                        nzTheme="outline"
+                        style="font-size: 1.1rem"
+                      ></span>
+                      <i class="pi pi-bookmark" style="font-size: 1.1rem"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="titles-btn">
+            <div class="late-texts">
+                <span class="last-news">{{video.title}}</span>
+                <span class="last-p" [innerHTML]="video.description"></span>
+              </div>
+              <div class="btn">
+                <span class="more" style="color: tomato; font-size: 17px; font-weight: 600; cursor: pointer;">მეტი</span>
+                <img class="more-logo" style="width: 25px; height: 25px; cursor: pointer; background-color: tomato; border-radius: 30px;" src="https://img.icons8.com/?size=100&id=11537&format=png&color=000000" alt="">
+              </div>
+        </div>
+        <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+        thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+        <swiper-slide *ngFor="let videos of video.items">
+          <div class="main-side">
+            <img class="video-img" src="{{videos.thumbnailUrl}}" alt="">
+            <div class="shida">
+              <img class="logo-plus"  src="https://europop.ge/images/eplus-gray.png" alt="">
+              <span class="video-text">{{videos.title}}</span>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+
+      <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
+        watch-slides-progress="true">
+        <swiper-slide *ngFor="let videos of video.items">
+          <div class="main-side">
+            <img class="video-img" src="{{videos.thumbnailUrl}}" alt="">
+            <div class="shida-2">
+              <span class="video-text-2">{{videos.title}}</span>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+      
+      <div class="main">
+          <div class="cards">
+            <div class="right-card" *ngFor="let pop of sport">
+              <img class="card-img-r" [src]="pop.image.fileUrl" alt="" />
+              <div class="text-side">
+                <div class="texts">
+                  <p class="card-subtitle">{{ pop.subtitle }}</p>
+                  <p class="card-title">{{ pop.title }}</p>
+                  <p class="card-text" [innerHTML]="pop.text.slice(0,85)"></p>
+                </div>
+                <div class="buttons">
+                  <div class="left-icons">
+                    <span class="time">{{ pop.timeSincePublished }}</span>
+                    <span
+                      nz-icon
+                      nzType="file-text"
+                      nzTheme="outline"
+                      style="font-size: 1rem"
+                    ></span>
+                    <span class="read">{{ pop.estimatedReadTime }}წთ</span>
+                  </div>
+                  <div class="right-icons">
+                    <i class="pi pi-thumbs-up" style="font-size: 1.1rem"></i>
+                    <span
+                      nz-icon
+                      nzType="message"
+                      nzTheme="outline"
+                      style="font-size: 1.1rem"
+                    ></span>
+                    <i class="pi pi-bookmark" style="font-size: 1.1rem"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main">
+            <div class="cards">
+              <div class="right-card" *ngFor="let pop of end">
+                <img class="card-img-r" [src]="pop.image.fileUrl" alt="" />
+                <div class="text-side">
+                  <div class="texts">
+                    <p class="card-subtitle">{{ pop.subtitle }}</p>
+                    <p class="card-title">{{ pop.title }}</p>
+                    <p class="card-text" [innerHTML]="pop.text.slice(0,85)"></p>
+                  </div>
+                  <div class="buttons">
+                    <div class="left-icons">
+                      <span class="time">2024 წელი</span>
+                      <span
+                        nz-icon
+                        nzType="file-text"
+                        nzTheme="outline"
+                        style="font-size: 1rem"
+                      ></span>
+                      <span class="read">{{ pop.estimatedReadTime }}წთ</span>
+                    </div>
+                    <div class="right-icons">
+                      <i class="pi pi-thumbs-up" style="font-size: 1.1rem"></i>
+                      <span
+                        nz-icon
+                        nzType="message"
+                        nzTheme="outline"
+                        style="font-size: 1.1rem"
+                      ></span>
+                      <i class="pi pi-bookmark" style="font-size: 1.1rem"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+     
+
+
+   
