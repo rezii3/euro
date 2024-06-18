@@ -50,6 +50,16 @@ import { SlideVideoComponent } from './slide-video/slide-video.component';
 import { AuthorsSlideComponent } from './authors-slide/authors-slide.component';
 import { ForumComponent } from './forum/forum.component';
 import { AllCardComponent } from './all-card/all-card.component';
+import { FooterComponent } from './footer/footer.component';
+import { SplitterModule } from 'primeng/splitter';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { SourceComponent } from './source/source.component';
+import { ProfileComponent } from './profile/profile.component'
+import { FieldsetModule } from 'primeng/fieldset';
+import { AvatarModule } from 'primeng/avatar';
+import { NzResultModule } from 'ng-zorro-antd/result';
+import { DetailsComponent } from './details/details.component';
 
 
 
@@ -77,6 +87,10 @@ registerLocaleData(en);
     AuthorsSlideComponent,
     ForumComponent,
     AllCardComponent,
+    FooterComponent,
+    SourceComponent,
+    ProfileComponent,
+    DetailsComponent,
 
   ],
   imports: [
@@ -106,6 +120,12 @@ registerLocaleData(en);
     CommonModule,
     NzCardModule,
     MenuModule,
+    SplitterModule,
+    ProgressSpinnerModule,
+    NzSpinModule,
+    FieldsetModule,
+    AvatarModule,
+    NzResultModule
 
 
 

@@ -425,3 +425,8 @@ width: 300px;
   color: tomato;
   cursor: pointer;
 }
+.main-footer{
+  max-width: 1200px;
+  width: 100%;
+  background-color: black;
+}

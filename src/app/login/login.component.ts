@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,6 +8,8 @@ import { FormControl, FormGroup, NonNullableFormBuilder, Validators } from '@ang
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+
+  
   validateForm: FormGroup<{
     userName: FormControl<string>;
     password: FormControl<string>;
@@ -29,6 +32,14 @@ export class LoginComponent {
       });
     }
   }
+  email!:string
+  password!:string
+  constructor(private fb: NonNullableFormBuilder,private _auth:AuthService) {}
 
-  constructor(private fb: NonNullableFormBuilder) {}
+  loginAction(){
+    this._auth.login(this.email,this.password).subscribe((data)=>{
+     localStorage.setItem("token", data.access_token)
+     console.log(data)
+    })
+  }
 }

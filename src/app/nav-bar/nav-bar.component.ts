@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -13,7 +14,9 @@ export class NavBarComponent {
   showUser:boolean = false
   showSearch:boolean =false
 
-  constructor() {}
+  constructor(public _auth: AuthService) {}
+
+  
   togglePlus() {
     this.showPlus = !this.showPlus;
   }

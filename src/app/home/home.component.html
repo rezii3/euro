@@ -7,6 +7,7 @@
   </div>
   <div class="container-cards">
     <div class="card" *ngIf="popular.length > 5">
+      <a href="details/{{popular[5].id}}"> 
       <img class="card-img" [src]="popular[5].image.fileUrl" alt="" />
       <div class="texts">
         <h2 class="card-subtitle">{{ popular[5].subtitle }}</h2>
@@ -14,7 +15,7 @@
       </div>
       <div class="buttons">
         <div class="left-icons">
-          <span class="time">8 საათის წინ .</span>
+          <span class="time">{{popular[5].estimatedReadTime}} საათის წინ</span>
           <span
             nz-icon
             nzType="file-text"
@@ -34,16 +35,20 @@
           <i class="pi pi-bookmark" style="font-size: 1.1rem"></i>
         </div>
       </div>
+    </a>
     </div>
+
     <div class="card-r">
       <div class="right-card" *ngFor="let pop of popular.slice(0, 4)">
+        <a href="details/{{pop.id}}"> 
         <img class="card-img-r" [src]="pop.image.fileUrl" alt="" />
         <div class="texts">
           <p class="card-title-r">{{ pop.title }}</p>
         </div>
+      </a>
         <div class="buttons">
           <div class="left-icons">
-            <span class="time">null საათის წინ .</span>
+            <span class="time">{{pop.estimatedReadTime }}საათის წინ</span>
             <span
               nz-icon
               nzType="file-text"

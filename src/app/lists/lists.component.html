@@ -5,15 +5,15 @@
           </div>
         <div class="list-main">
             <div class="late-main">
-                <div class="late-info" *ngFor="let lateinfo of info.slice(0,7)">
-                  <span class="late-title">{{lateinfo.title.slice(0,65)}}</span>
-                  <span class="arrow-last" nz-icon nzType="right-circle" nzTheme="outline" style="font-size: 1.5rem;"></span>
+                <div class="late-info" *ngFor="let lateinfo of info.slice(0,7)" >
+                  <span class="late-title" >{{lateinfo.title.slice(0,65)}}</span>
+                  <a class="arrow-last"  href="details/{{lateinfo.id}}"><span class="arrow-last" nz-icon nzType="right-circle" nzTheme="outline" style="font-size: 1.5rem;"></span></a>
                 </div>
               </div>
               <div class="late-main">
                 <div class="late-info" *ngFor="let lateinfo of info.slice(7,14)">
                   <span class="late-title">{{lateinfo.title.slice(0,65)}}</span>
-                  <span class="arrow-last" nz-icon nzType="right-circle" nzTheme="outline" style="font-size: 1.5rem;"></span>
+                  <a class="arrow-last"  href="details/{{lateinfo.id}}"><span class="arrow-last" nz-icon nzType="right-circle" nzTheme="outline" style="font-size: 1.5rem;"></span></a>
                 </div>
               </div>
         </div>
@@ -23,7 +23,7 @@
                 <span class="last-p">ევროპოპის ანალიტიკა, ბლოგები, ინტერვიუები</span>
               </div>
               <div class="btn">
-                <span class="more" style="color: tomato; font-size: 17px; font-weight: 600; cursor: pointer;">მეტი</span>
+              <a href="/login"> <span class="more" style="color: tomato; font-size: 17px; font-weight: 600; cursor: pointer;">მეტი</span></a> 
                 <img class="more-logo" style="width: 25px; height: 25px; cursor: pointer; background-color: tomato; border-radius: 30px;" src="https://img.icons8.com/?size=100&id=11537&format=png&color=000000" alt="">
               </div>
         </div>
@@ -31,9 +31,8 @@
         <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
         slides-per-view="2">
         <swiper-slide *ngFor="let slide of carusel">
-            
             <div class="power-card">
-                <img class="power-img" [src]="slide.image.fileUrl" alt="" />
+              <a href="details/{{slide.id}}">  <img class="power-img" [src]="slide.image.fileUrl" alt="" /> </a>
                 <div class="text-side-power">
                   <div class="texts-p">
                     <p class="card-subtitle">{{ slide.subtitle }}</p>

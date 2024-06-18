@@ -4,7 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 4000px;
+    height: 3800px;
 }
 .main-top{
     display: flex;
@@ -207,4 +207,6 @@ margin-top: 10px;
     position: relative;
     top: 2px;
   }
-  
+  .pi:hover{
+    color: white;
+  }

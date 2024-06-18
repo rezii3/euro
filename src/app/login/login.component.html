@@ -1,4 +1,5 @@
-<div class="container"><div class="container-form">
+<div class="container">
+  <div class="container-form">
     <div class="form-top">
         <div class="logo">
             <img class="top-img" src="https://europop.ge/images/eplus.png" alt="">
@@ -11,14 +12,14 @@
         <nz-form-item>
           <nz-form-control nzErrorTip="Please input your username!">
             <nz-input-group nzPrefixIcon="user">
-              <input type="text" nz-input formControlName="userName" placeholder="ელფოსტა" />
+              <input type="email" nz-input formControlName="userName" placeholder="ელფოსტა" [(ngModel)]="email" name="email"/>
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
         <nz-form-item>
           <nz-form-control nzErrorTip="Please input your Password!">
             <nz-input-group nzPrefixIcon="lock">
-              <input type="password" nz-input formControlName="password" placeholder="პაროლი" />
+              <input type="password" nz-input formControlName="password" placeholder="პაროლი" [(ngModel)]="password" name="password"/>
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
@@ -33,7 +34,7 @@
           </div>
         </div>
         <div class="form-end">
-            <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">ავტორიზაცია</button>
+         <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" (click)="loginAction()">ავტორიზაცია</button>
         <h3 class="dont">არ გაქვს ანგარიში?<a class="now" href="">რეგისტრაცია</a></h3>
         </div>
         <div class="space">

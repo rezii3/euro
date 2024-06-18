@@ -34,7 +34,7 @@
         <h1 class="power-text" style="font-size: 27px; color: white; font-weight: 600; margin: 0px;">europebet</h1>
       </div>
       <div class="power-card">
-          <img class="power-img" [src]="power.image.fileUrl" alt="" />
+        <a href="details/{{power.id}}"> <img class="power-img" [src]="power.image.fileUrl" alt="" /> </a>
           <div class="text-side-power">
             <div class="texts-p">
               <p class="card-subtitle">{{ power.subtitle }}</p>
@@ -71,7 +71,7 @@
         </div>
         <div class="info-card-main">
           <div class="info-cards" style="background-color: #202022;" *ngFor="let info of cardInfo.slice(0,3)">
-            <img class="card-img-info" style="cursor: pointer;" [src]="info.image.fileUrl" alt="" />
+            <a href="details/{{info.id}}"> <img class="card-img-info" style="cursor: pointer;" [src]="info.image.fileUrl" alt="" /> </a>
             <div class="text-side">
               <div class="texts">
                 <p class="card-subtitle" style="font-size: 13px;">{{ info.subtitle}}</p>
@@ -82,7 +82,7 @@
         </div>
       </div>
       <div class="btn">
-        <span class="more" style="color: tomato; font-size: 19px; font-weight: 600; cursor: pointer;">მეტი</span>
+       <a href="/login"> <span class="more" style="color: tomato; font-size: 19px; font-weight: 600; cursor: pointer;">მეტი</span></a>
         <img class="more-logo" style="width: 30px; height: 30px; cursor: pointer; background-color: tomato; border-radius: 30px;" src="https://img.icons8.com/?size=100&id=11537&format=png&color=000000" alt="">
       </div>
       <div class="social">
@@ -114,7 +114,7 @@
         </div>
         <div class="late-info" *ngFor="let lateinfo of late.slice(0,7)">
           <span class="late-title">{{lateinfo.title}}</span>
-          <span class="arrow-last" nz-icon nzType="right-circle" nzTheme="outline" style="font-size: 1.5rem;"></span>
+          <a href="details/{{lateinfo.id}}">  <span class="arrow-last" nz-icon nzType="right-circle" nzTheme="outline" style="font-size: 1.5rem;"></span> </a>
         </div>
       </div>
 

@@ -40,18 +40,21 @@
                     <input class="input" type="search" placeholder="მოძებნე პოსტი,ავტორი,კატეგორია..." />
                 </div>
             </div>
-            <div class="bell" (click)="enter()">
-                <span style="font-size: 20px; padding: 15px; border-radius: 40px; background-color: #232325;" nz-icon nzType="bell" nzTheme="outline"></span>
+            <div class="bell">
+              <a href="/login">  <span style="font-size: 20px; padding: 15px; border-radius: 40px; background-color: #232325;" nz-icon nzType="bell" nzTheme="outline"></span></a>
             </div>
             <div class="login" (click)="enter2()">
                 <span style="font-size: 20px; padding: 15px; border-radius: 40px; background-color: #232325;" nz-icon nzType="user" nzTheme="outline"></span>
             </div>
+            <div class="login">
+              <a href="/profile" > <span style="font-size: 20px; padding: 15px; border-radius: 40px; background-color: #232325;" nz-icon nzType="idcard" nzTheme="outline"></span></a>
+            </div>
+            
         </div>
     </div>
 </div>
 <app-navbar-plus *ngIf="showPlus"></app-navbar-plus>
 <app-side-menu *ngIf="showSideMenu" ></app-side-menu>
- <app-login *ngIf="showLogin"></app-login>
  <app-user *ngIf="showUser"></app-user>
  <app-search *ngIf="showSearch"></app-search>
 

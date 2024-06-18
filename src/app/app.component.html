@@ -1,2 +1,9 @@
-<app-nav-bar></app-nav-bar>
-<router-outlet></router-outlet>
+
+<div class="container" *ngIf="laoding">
+    <div class="loader">
+        <span>Loading...</span>
+    </div>
+</div>
+<app-nav-bar *ngIf="!laoding"></app-nav-bar>
+<router-outlet *ngIf="!laoding"></router-outlet>
+<app-footer *ngIf="!laoding"></app-footer>

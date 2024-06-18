@@ -1,0 +1,30 @@
+@if (_auth.shesulia()=== true) {
+<div class="container">
+    <div class="content">
+        <p-fieldset>
+            <ng-template pTemplate="header">
+                <div class="flex">
+                    <img src="{{profileData.avatar}}" alt="">
+                    <span class="font-bold">{{profileData.name}}</span>
+                </div>
+            </ng-template>
+            <p class="m-0">
+                Hi! I'm John, a passionate traveler and amateur photographer. When I'm not exploring new destinations or capturing moments through my lens, you can find me trying out new recipes, hiking in the mountains, or curled up with a good book.
+
+I love connecting with like-minded individuals, so feel free to reach out if you share similar interests or just want to chat about your latest adventure!
+            </p>
+        </p-fieldset>
+        <div class="logout">
+            <span style="font-size: 15px; color: white; font-weight: 600;">contact me <a style="font-size: 15px; font-weight: 600;" href="">{{profileData.email}}</a></span>
+            <a (click)="logOut()" href="/login" *ngIf="_auth.shesulia()=== true"> <span style="font-size: 20px; padding: 15px; border-radius: 40px; background-color: #232325;" nz-icon nzType="logout" nzTheme="outline"></span></a>
+        </div>
+    </div>
+</div>
+}
+@if (_auth.shesulia()=== false) {
+    <nz-result nzStatus="403" nzTitle="403" nzSubTitle="Sorry, you are not authorized to access this page.">
+        <div nz-result-extra>
+         <a href="/login"> <button nz-button nzType="primary">გაიარე რეგისტრაცია</button></a>
+        </div>
+      </nz-result>
+}

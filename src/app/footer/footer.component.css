@@ -1,0 +1,204 @@
+.input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input {
+    min-height: 45px;
+    max-width: 210px;
+    padding: 0 1rem;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    background-color: transparent;
+    background-color: white;
+  }
+
+  input::placeholder{
+    background-color: white;
+  }
+  .button--submit {
+    min-height: 45px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 7px;
+    background-color: #0c0c0d;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+  }
+  
+  .button--submit:hover {
+    background-color: tomato;
+  }
+  
+  .input:focus, .input:focus-visible {
+    border-color: #eaeaea;
+    outline: none;
+  }
+  .content{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .container{
+    background-color: rgb(26, 26, 28);
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .icons{
+    width: 35px;
+    height: 35px;
+  }
+  .left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+    width: 30%;
+    gap: 20px;
+
+  }
+  .logo-text{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+    margin: 0px;
+  }
+  .title{
+    color: gray;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .text{
+    color: white;
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+    padding: 7px 0px;
+    width: 330px;
+  }
+  .middle-texts{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .folow{
+    color: rgb(166, 166, 166);
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .icons-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .messanger{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 40px;
+    background-color: black;
+    border-radius: 10px;
+  }
+  .top-texts{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5px 0px;
+  }
+  .mes-logo{
+    width: 23px;
+    height: 23px;
+  }
+  .end-texts{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px
+    ;
+  }
+
+  .right{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 300px;
+    margin-top: 10px;
+    width: 70%;
+  }
+  .title-ul{
+    color: tomato;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .links{
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    padding: 7px 0px;
+    list-style: none;
+    text-align: start;
+  }
+  .plus-logo{
+    width: 40px;
+    height: 25px;
+    margin-left: 15px;
+  }
+  .end-side{
+    padding: 30px 0px;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .end-left{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+  }
+ .apple,.play-store{
+  width: 140px;
+  height: 40px;
+  cursor: pointer;
+ }
+ .logo-topGe{
+  width: 110px;
+  height: 40px;
+ }
+ .banner-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px
+  ;
+ }
+ .develop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+ }
+ .text-by{
+  color: white;
+  font-size: 14px;
+  color: rgb(189, 189, 189);
+  font-weight: 500;
+ }

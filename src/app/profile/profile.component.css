@@ -1,0 +1,38 @@
+.container{
+    background-image: url(https://europop.ge/images/reg-auth-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .User-card{
+        height: auto;
+        width: 400px;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 600px;
+    }
+    .flex{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        height: auto;
+        padding: 5px 15px;
+    }
+  .font-bold{
+    font-size: 17px;
+    font-weight: 600;
+  }
+img{
+    width: 35px;
+    height: 35px;
+    border-radius: 40px;
+}

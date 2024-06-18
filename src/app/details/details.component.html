@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="content">
+        <div class="left-side">
+            <div class="card">
+                <div class="img-side">
+                 <img class="photo" src="{{come.image.fileUrl}}" alt="">
+                </div>
+                <div class="end-text">
+                 <p class="card-subtitle">{{come.subtitle}}</p>
+                 <p class="card-title">{{come.title}}</p>
+                </div>
+                <div class="icons">
+                    <div class="icon-left">
+                        <i class="pi pi-heart" style="font-size: 1.3rem"></i>
+                        <i class="pi pi-comments" style="font-size: 1.3rem"></i>
+                    </div>
+                    <div class="icon-right">
+                        <i class="pi pi-bookmark" style="font-size: 1.3rem"></i>
+                        <i class="pi pi-share-alt" style="font-size: 1.3rem"></i>
+                    </div>
+                </div>
+                <div class="card-texts">
+                    <div class="text-div">
+                        <p class="texts-p" [innerHTML]="come.text"></p>
+                    </div>
+                    <div class="auth-div">
+                        <div class="auth-info">
+                            <img class="avatar-img" src="{{come.author.avatar.fileUrl}}" alt="">
+                            <span class="names">{{come.author.firstName}} {{come.author.lastName}} </span>
+                            <i class="pi pi-file-check" style="font-size: 1.3rem"></i>
+                            <span class="names">{{come.estimatedReadTime}} წთ</span>
+                        </div>
+                    </div>
+                    
+                    <swiper-container class="mySwiper" pagination="true">
+                        <swiper-slide *ngFor="let module of come.modules">
+                            <ng-container *ngFor="let item of module.items">
+                            <img  class="slide-img" [src]="item.image.fileUrl" alt="">
+                        </ng-container>
+                        </swiper-slide>
+                      </swiper-container>
+
+                    <div class="text-div" *ngFor="let info of come.modules">
+                        <p class="texts-p" [innerHTML]="info.text"></p>
+                    </div>
+
+                </div>
+             </div>
+        </div>
+        <div class="right-side">
+            <app-aside></app-aside>
+        </div>
+    </div>
+</div>

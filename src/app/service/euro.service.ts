@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { authorsRoot, routi } from '../interfaces/euro.model';
+import { Datum, authorsRoot, routi } from '../interfaces/euro.model';
 import { newsroot } from '../interfaces/news.model';
 import { Welcome } from '../interfaces/power.model';
 import { latestRoot } from '../interfaces/latest.model';
 import { slideRout } from '../interfaces/slide.model';
 import { videoRoot } from '../interfaces/video.model';
 import { endRoot } from '../interfaces/end.model';
+import { of } from 'rxjs';
+import { delay } from 'rxjs';
+import { IdCome } from '../interfaces/comeId.model';
 
 
 @Injectable({
@@ -36,9 +38,18 @@ export class EuroService {
 
 
 
+  getSpin(){
+    return of("webtechtalk").pipe(delay(300))
+  }
+  
   getSideUrl() {
     return this._http.get<routi>(this.sideUrl);
   }
+  getSideID(id:number){
+    const _baseSide =  `http://localhost:3000/proxy?targetUrl=https://europop.ge/api/posts/${id}`
+    return this._http.get<IdCome>(_baseSide)
+  }
+
   getPlusUrl() {
     return this._http.get<routi>(this.plusUrl);
   }

@@ -1,12 +1,7 @@
 .container-form{
     width: 580px;
-    height: 625px;
-    background-image: url(https://europop.ge/images/bgModal.png);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
-    position: absolute;
-    background-color: #242425;
+    height: 700px;
+    background-color: #1c1c1e;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -15,15 +10,23 @@
     border-radius: 15px;
 }
 .container{
-    position: absolute;
-    left: 35%;
-    top: 150px;
+background-image: url(https://europop.ge/images/reg-auth-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 .me{
     color: white;
 }
 .login-form{
     width: 50%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
 }
 .form-top{
     display: flex;
@@ -108,6 +111,7 @@ p{
 }
 a{
     font-weight: 600;
+    font-size: 13px;
 }
 .dont{
     color: white;
